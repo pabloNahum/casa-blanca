@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('sitio.index');
 });
 
 //------------- Vistas de Sistema -------------\\
@@ -22,3 +22,37 @@ Route::get('/sistema/clientes', 'clientesController@principal');
 Route::get('/sistema/obras', 'obrasController@principal');
 Route::get('/sistema/usuarios', 'usuariosController@principal');
 Route::get('/sistema/ventas', 'ventasController@principal');
+
+//------------- Formularios de Actores -------------\\
+
+Route::get('/sistema/actores/nuevo_actor');
+Route::get('/sistema/actores/consulta_actor');
+
+//------------- Formularios de Clientes -------------\\
+
+Route::get('/sistema/actores/nuevo_cliente', 'actoresController@nuevocliente');
+Route::get('/sistema/actores/consulta_cliente', 'actoresController@consultacliente');
+
+//------------- Formularios de Obras -------------\\
+
+Route::get('/sistema/actores/nueva_obra', 'obrasController@nuevaobra');
+Route::get('/sistema/actores/consulta_obra', 'obrasController@consultaobra');
+
+//------------- Formularios de Usuarios -------------\\
+
+Route::get('/sistema/actores/nuevo_usuario', 'usuariosController@nuevousuario');
+Route::get('/sistema/actores/consulta_usuario', 'usuariosController@consultausuario');
+
+//------------- Formularios de Ventas -------------\\
+
+Route::get('/sistema/actores/nueva_venta', 'ventasController@nuevaventa');
+Route::get('/sistema/actores/consulta_venta', 'ventasController@nuevoventa');
+
+//------------- Vistas de Sitio -------------\\
+
+Route::get('/', 'sitioController@home');
+Route::get('/blog', 'sitioController@blog');
+Route::get('/boletos', 'sitioController@boletos');
+Route::get('/cartelera', 'sitioController@cartelera');
+Route::get('/contacto', 'sitioController@contacto');
+Route::get('/cuenta', 'sitioController@cuenta');
