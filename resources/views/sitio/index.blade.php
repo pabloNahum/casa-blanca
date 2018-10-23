@@ -1,15 +1,18 @@
-@extends('sitio.menu')
-<!DOCTYPE HTML>
+@extends('sitio.master')
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>Casa Blanca | Teatro</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body>
-    @section('menu')
-		<!-- Banner -->
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+@section('header')
+
+    <!-- Banner -->
 			<section class="banner full">
 				<article>
 					<img src="images/slide01.jpg" alt="" />
@@ -70,10 +73,10 @@
 								</div>
 								<div class="content">
 									<header class="align-center">
-										<p>José Antonio Flores presenta:</p>
+										<p> José Antonio Flores presenta:</p>
 										<h2>Kenia, mi cielo</h2>
 									</header>
-									<p> Él, quería convertirse en el mejor escritor del mundo, pero quizás pedir que lo encerraran, solo, durante un año sin poder salir... No haya sido la mejor idea.</p>
+									<p>Él, quería convertirse en el mejor escritor del mundo, pero quizás pedir que lo encerraran, solo, durante un año sin poder salir... No haya sido la mejor idea.</p>
 									<footer class="align-center">
 										<a href="#" class="button alt">Comprar Boletos</a>
 									</footer>
@@ -89,7 +92,7 @@
 								<div class="content">
 									<header class="align-center">
 										<p>Arturo Sosa presenta:</p>
-										<h2>La Otra Cara del Miedo</h2>
+										<h2>LA OTRA CARA DEL MIEDO</h2>
 									</header>
 									<p> También los entes malévolos tienen sentimientos y al parecer sufren mas que nosotros ¿quieres conocer sus verdaderas historias? Acompáñanos en este recorrido por el inframundo...</p>
 									<footer class="align-center">
@@ -107,8 +110,8 @@
 			<section id="two" class="wrapper style3">
 				<div class="inner">
 					<header class="align-center">
-						<p>El teatro es la poesia que salta del libro y se hace humana. Y al hacerce humana salta y grita, llora y se estremece.</p>
-						<h2>Federíco Garíca Lorca</h2>
+						<p>El teatro es la poseía que se levanta del libro y se hace humana. Y al hacerser humana, habla y grita, llora y se desespera.</p>
+						<h2>Federíco García Lorca</h2>
 					</header>
 				</div>
 			</section>
@@ -117,8 +120,8 @@
 			<section id="three" class="wrapper style2">
 				<div class="inner">
 					<header class="align-center">
-						<p class="special">Conquistaremos Toluca</p>
-						<h2>Próximamente    </h2>
+						<p class="special">Venimos a conquistar Toluca</p>
+						<h2>Próximamente</h2>
 					</header>
 					<div class="gallery">
 						<div>
@@ -144,29 +147,6 @@
 					</div>
 				</div>
 			</section>
-
-
-		<!-- Footer -->
-			<footer id="footer">
-				<div class="container">
-					<ul class="icons">
-						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="https://www.facebook.com/casablancateatro/" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="mailto:" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
-					</ul>
-				</div>
-				<div class="copyright">
-					&copy; Casa Blanca Teatro | Derechos Revervados.
-				</div>
-			</footer>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+        @section('footer')
+</body>
 </html>
