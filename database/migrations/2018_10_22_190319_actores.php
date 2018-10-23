@@ -10,7 +10,7 @@ class Actores extends Migration
     public function up()
     {
         Schema::create('actores', function (Blueprint $table) {
-			$table->engine = 'InnoDB';
+			
 			$table->increments('ida');
 			$table->String('nom_act');
 			$table->String('ap_act');

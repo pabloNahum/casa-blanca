@@ -7,24 +7,7 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body>
-
-		<!-- Header -->
-			<header id="header" class="alt">
-				<div class="logo"><a href="<?php echo e(url('/cuenta')); ?>" class="icon fa-user"><span class="label"></span> Accede a tu cuenta</a></div>
-				<a href="#menu">Menu</a>
-			</header>
-
-		<!-- Nav -->
-			<nav id="menu">
-				<ul class="links">
-					<li><a href="<?php echo e(url('/')); ?>">Inicio</a></li>
-					<li><a href="<?php echo e(url('/cartelera')); ?>">Cartelera</a></li>
-					<li><a href="<?php echo e(url('/boletos')); ?>">Boletos</a></li>
-                    <li><a href="<?php echo e(url('/blog')); ?>">Blog</a></li>
-                    <li><a href="<?php echo e(url('/contacto')); ?>">Contacto</a></li>
-				</ul>
-			</nav>
-
+    <?php $__env->startSection('menu'); ?>
 		<!-- Banner -->
 			<section class="banner full">
 				<article>
@@ -186,3 +169,4 @@
 
 	</body>
 </html>
+<?php echo $__env->make('sitio.menu', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

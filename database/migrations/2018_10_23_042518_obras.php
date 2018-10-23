@@ -9,8 +9,7 @@ class Obras extends Migration
     
     public function up()
     {
-        Schema::create('obras', function (Blueprint $table){
-			$table->engine = 'InnoDB';
+        Schema::create('obras', function(Blueprint $table){
 			$table->increments('ido');
 			$table->String('nombre');
 			$table->time('duracion');
@@ -18,10 +17,10 @@ class Obras extends Migration
 			$table->String('clasificacion');
 			$table->date('fecha');
 			$table->String('foro');
-			$table->integer('id_act');
-			$table->foreign('id_act')->references('ida')->on('actores');
-			$table->integer('id_hor');
-			$table->foreign('id_hor')->references('idh')->on('horarios');
+			$table->integer('ida')->unsigned();
+			$table->foreign('ida')->references('ida')->on('actores');
+			$table->integer('idh')->unsigned();
+			$table->foreign('idh')->references('idh')->on('horarios');
 			$table->rememberToken();
             $table->timestamps();
 		});
@@ -30,6 +29,10 @@ class Obras extends Migration
    
     public function down()
     {
+<<<<<<< HEAD
         Schema::drop('obras');
+=======
+     Schema::drop('obras');
+>>>>>>> 1f4acc1bd93a8d0b793a952a640147c35770e4a1
     }
 }

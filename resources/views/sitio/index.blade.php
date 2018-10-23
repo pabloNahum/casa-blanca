@@ -1,3 +1,4 @@
+@extends('sitio.menu')
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -7,24 +8,7 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body>
-
-		<!-- Header -->
-			<header id="header" class="alt">
-				<div class="logo"><a href="{{ url('/cuenta')}}" class="icon fa-user"><span class="label"></span> Accede a tu cuenta</a></div>
-				<a href="#menu">Menu</a>
-			</header>
-
-		<!-- Nav -->
-			<nav id="menu">
-				<ul class="links">
-					<li><a href="{{ url('/') }}">Inicio</a></li>
-					<li><a href="{{ url('/cartelera') }}">Cartelera</a></li>
-					<li><a href="{{ url('/boletos') }}">Boletos</a></li>
-                    <li><a href="{{ url('/blog') }}">Blog</a></li>
-                    <li><a href="{{ url('/contacto') }}">Contacto</a></li>
-				</ul>
-			</nav>
-
+    @section('menu')
 		<!-- Banner -->
 			<section class="banner full">
 				<article>
