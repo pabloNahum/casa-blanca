@@ -30,8 +30,9 @@ Route::get('/sistema/actores/consulta_actor');
 
 //------------- Formularios de Clientes -------------\\
 
-Route::get('/sistema/actores/nuevo_cliente', 'actoresController@nuevocliente');
-Route::get('/sistema/actores/consulta_cliente', 'actoresController@consultacliente');
+Route::get('/sistema/clientes/nuevo_cliente', 'clientesontroller@nuevocliente');
+Route::POST('/sistema/clientes/guarda_cliente', 'clientesontroller@guardacliente')->name('guardacliente');
+Route::get('/sistema/clientes/consulta_cliente', 'clientesController@consultacliente');
 
 //------------- Formularios de Obras -------------\\
 
