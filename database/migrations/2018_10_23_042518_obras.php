@@ -27,13 +27,9 @@ class Obras extends Migration
 		});
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
+   
     public function down()
     {
-        //
+        Schema::drop('obras');
     }
 }
