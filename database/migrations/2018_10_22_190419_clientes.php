@@ -6,23 +6,22 @@ use Illuminate\Database\Migrations\Migration;
 
 class Clientes extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
-        //
+        Schema::create('clientes', function (Blueprint $table) {
+			$table->engine = 'InnoDB';
+			$table->increments('idc');
+			$table->String('nom_cte');
+			$table->String('ap_cte');
+			$table->String('am_cte');
+			$table->integer('telefono');
+			$table->rememberToken();
+            $table->timestamps();
+		});
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
-        //
+        Schema::drop('clientes');
     }
 }

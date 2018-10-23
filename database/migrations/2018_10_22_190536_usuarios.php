@@ -6,23 +6,25 @@ use Illuminate\Database\Migrations\Migration;
 
 class Usuarios extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+    
     public function up()
     {
-        //
+        Schema::create('usuarios', function (Blueprint $table){
+			$table->engine = 'InnoDB';
+			$table->increments('idu');
+			$table->String('nom_cte');
+			$table->String('ap_cte');
+			$table->String('user');
+			$table->String('pass');
+			$table->String('pass2');
+			$table->integer('telefono');
+			$table->rememberToken();
+            $table->timestamps();
+		});
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
-        //
+        Schema::drop('usuarios');
     }
 }

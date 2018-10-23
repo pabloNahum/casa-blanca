@@ -6,23 +6,21 @@ use Illuminate\Database\Migrations\Migration;
 
 class Horarios extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+    
     public function up()
     {
-        //
+        Schema::create('horarios', function(Blueprint $table) {
+			$table->engine = 'InnoDB';
+			$table->increments('idh');
+			$table->time('hora');
+			$table->rememberToken();
+            $table->timestamps();
+		});
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
+    
     public function down()
     {
-        //
+         Schema::drop('horarios');
     }
 }
