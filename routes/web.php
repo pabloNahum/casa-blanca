@@ -47,14 +47,15 @@ Route::POST('/sistema/obras/consulta_obra', 'obrasController@consultaobra');
 
 //------------- Formularios de Usuarios -------------\\
 
-Route::get('/sistema/actores/nuevo_usuario', 'usuariosController@nuevousuario');
+Route::get('/sistema/usuarios/nuevo_usuario', 'usuariosController@nuevousuario');
 Route::POST('/sistema/usuarios/guarda_usuario',  'usuariosController@guardausuario')->name('guardausuario');
-Route::get('/sistema/actores/consulta_usuario', 'usuariosController@consultausuario');
+Route::get('/sistema/usuarios/consulta_usuario', 'usuariosController@consultausuario');
 
 //------------- Formularios de Ventas -------------\\
 
-Route::get('/sistema/actores/nueva_venta', 'ventasController@nuevaventa');
-Route::get('/sistema/actores/consulta_venta', 'ventasController@nuevoventa');
+Route::get('/sistema/ventas/nueva_venta', 'ventasController@nuevaventa');
+Route::POST('/sistema/ventas/guarda_venta',  'ventasController@guardaventa')->name('guardaventa');
+Route::get('/sistema/ventas/consulta_venta', 'ventasController@consultaventa');
 
 //------------- Vistas de Sitio -------------\\
 
