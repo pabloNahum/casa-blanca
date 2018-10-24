@@ -30,19 +30,19 @@ Route::get('/sistema/actores/consulta_actor');
 
 //------------- Formularios de Clientes -------------\\
 
-<<<<<<< HEAD
 Route::get('/sistema/clientes/nuevo_cliente', 'actoresController@nuevocliente');
 Route::get('/sistema/clientes/consulta_cliente', 'actoresController@consultacliente');
-=======
+
 Route::get('/sistema/clientes/nuevo_cliente', 'clientesontroller@nuevocliente');
 Route::POST('/sistema/clientes/guarda_cliente', 'clientesontroller@guardacliente')->name('guardacliente');
 Route::get('/sistema/clientes/consulta_cliente', 'clientesController@consultacliente');
->>>>>>> b3b03c9ae74c3495a5795621fcff6938a3e504b9
+
 
 //------------- Formularios de Obras -------------\\
 
-Route::post('/sistema/obras/nueva_obra', 'obrasController@nuevaobra');
-Route::POST('/sistema/obras/consulta_obra', 'obrasController@consultaobra');
+Route::get('/sistema/obras/nueva_obra', 'obrasController@nuevaobra');
+Route::get('/sistema/obras/consulta_obra', 'obrasController@consultaobra');
+Route::POST('/sistema/obras/guarda_obra', 'obrasController@guardaobra');
 
 
 //------------- Formularios de Usuarios -------------\\
