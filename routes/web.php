@@ -30,13 +30,14 @@ Route::get('/sistema/actores/consulta_actor');
 
 //------------- Formularios de Clientes -------------\\
 
-Route::get('/sistema/actores/nuevo_cliente', 'actoresController@nuevocliente');
-Route::get('/sistema/actores/consulta_cliente', 'actoresController@consultacliente');
+Route::get('/sistema/clientes/nuevo_cliente', 'actoresController@nuevocliente');
+Route::get('/sistema/clientes/consulta_cliente', 'actoresController@consultacliente');
 
 //------------- Formularios de Obras -------------\\
 
-Route::get('/sistema/actores/nueva_obra', 'obrasController@nuevaobra');
-Route::get('/sistema/actores/consulta_obra', 'obrasController@consultaobra');
+Route::post('/sistema/obras/nueva_obra', 'obrasController@nuevaobra');
+Route::POST('/sistema/obras/consulta_obra', 'obrasController@consultaobra');
+
 
 //------------- Formularios de Usuarios -------------\\
 
