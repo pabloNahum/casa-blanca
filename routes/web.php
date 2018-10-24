@@ -38,7 +38,7 @@ Route::get('/sistema/clientes/consulta_cliente', 'clientesController@consultacli
 
 Route::get('/sistema/obras/nueva_obra', 'obrasController@nuevaobra');
 Route::get('/sistema/obras/consulta_obra', 'obrasController@consultaobra');
-Route::POST('/sistema/obras/guarda_obra', 'obrasController@guardaobra');
+Route::POST('/sistema/obras/guarda_obra', 'obrasController@guardaobra')->name('guardaobra');
 
 
 //------------- Formularios de Usuarios -------------\\

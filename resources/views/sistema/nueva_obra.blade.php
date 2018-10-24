@@ -8,7 +8,7 @@
 	</head>
 	<body>
 		<div id="altas_user-div">
-			<form id="altas_user-form" action="{{route ('/sistema/obras/guarda_obra') }}" method = 'POST' enctype='multipart/form-data'>
+			<form id="altas_user-form" action="{{route ('guardaobra') }}" method = 'POST' enctype='multipart/form-data'>
 				<h2 id="form-title">Nueva Obra</h2>
 				<input type="text" placeholder="ID de Obra" name="ido" disabled /><br></br>
 				<input type="text" placeholder="Nombre" name="nombre" /><br></br>
@@ -21,6 +21,12 @@
 				<select name='id_act'>
 				@foreach($actores as $act)
 				<option value= '{{$act->id_act}}'>{{$act->nom_act}}</option>
+				@endforeach
+				</select><br></br>
+				<label for="id_act">Seleccione Horario</label></br>
+				<select name='id_act'>
+				@foreach($horarios as $hr)
+				<option value= '{{$act->id_act}}'>{{$hr->hora}}</option>
 				@endforeach
 				</select><br></br>
 				<input type="submit" value="Aceptar" name="btn_aceptar"/>
