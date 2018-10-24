@@ -3247,7 +3247,11 @@ Stack trace:
 #53 C:\xampp\htdocs\casa-blanca\public\index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
 #54 {main}  
 >>>>>>> b3b03c9ae74c3495a5795621fcff6938a3e504b9
+<<<<<<< HEAD
 [2018-10-24 16:36:58] local.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Parse error: syntax error, unexpected '<<' (T_SL), expecting end of file in C:\xampp\htdocs\casa-blanca\routes\web.php:33
+=======
+[2018-10-24 03:24:24] local.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Parse error: syntax error, unexpected '<<' (T_SL), expecting end of file in C:\xampp\htdocs\casa-blanca\routes\web.php:33
+>>>>>>> 80ce111683b7575fffbf8aaefbbe9ab1768ab312
 Stack trace:
 #0 C:\xampp\htdocs\casa-blanca\vendor\laravel\framework\src\Illuminate\Routing\Router.php(283): Illuminate\Routing\Router->loadRoutes('C:\\xampp\\htdocs...')
 #1 C:\xampp\htdocs\casa-blanca\vendor\laravel\framework\src\Illuminate\Routing\RouteRegistrar.php(104): Illuminate\Routing\Router->group(Array, 'C:\\xampp\\htdocs...')
@@ -3277,6 +3281,7 @@ Stack trace:
 #25 C:\xampp\htdocs\casa-blanca\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
 #26 C:\xampp\htdocs\casa-blanca\public\index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
 #27 {main}  
+<<<<<<< HEAD
 [2018-10-24 16:37:19] local.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Parse error: syntax error, unexpected '===' (T_IS_IDENTICAL), expecting end of file in C:\xampp\htdocs\casa-blanca\routes\web.php:35
 Stack trace:
 #0 C:\xampp\htdocs\casa-blanca\vendor\laravel\framework\src\Illuminate\Routing\Router.php(283): Illuminate\Routing\Router->loadRoutes('C:\\xampp\\htdocs...')
@@ -4656,3 +4661,5 @@ Stack trace:
 #45 C:\xampp\htdocs\casa-blanca\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(116): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
 #46 C:\xampp\htdocs\casa-blanca\public\index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
 #47 {main}  
+=======
+>>>>>>> 80ce111683b7575fffbf8aaefbbe9ab1768ab312
