@@ -11,6 +11,16 @@ class obrasController extends Controller
 	}
 	
 	public function nuevaobra() {
-		return view('sistema.nueva_obra');
+		$incid = obras::orderBy('ido', 'desc')
+									->take(1)
+									->get();
+		$idof = $incid[0]->ido+1;
+
+		return view('sistema.nueva_obra')
+					->with('idof', $idof);
+	}
+	
+	public function guardaobra() {
+		return view('sistema.guarda_obra');
 	}
 }
