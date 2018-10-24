@@ -9,7 +9,6 @@ class Clientes extends Migration
     public function up()
     {
         Schema::create('clientes', function (Blueprint $table) {
-			$table->engine = 'InnoDB';
 			$table->increments('idc');
 			$table->String('nom_cte');
 			$table->String('ap_cte');

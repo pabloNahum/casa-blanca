@@ -10,7 +10,6 @@ class Horarios extends Migration
     public function up()
     {
         Schema::create('horarios', function(Blueprint $table) {
-			$table->engine = 'InnoDB';
 			$table->increments('idh');
 			$table->time('hora');
 			$table->rememberToken();
