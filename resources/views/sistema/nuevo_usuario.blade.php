@@ -1,7 +1,14 @@
 <html>
+<head>
+		<title>Alta Usuario | Casa Blanca</title>
+		<meta charset="utf-8" />
+		  <link rel="stylesheet" href="{{ asset('assets/css/forms.css') }}" />
+		<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" />
+	</head>
 <body>
-<h1> Alta Usuarios</h1>
-<form action ="{{route ('guardausuario')}}" method = 'POST'>
+<div id="altas_user-div">
+<form  id="altas_user-form" action ="{{route ('guardausuario')}}" method = 'POST'>
+<h1 id="form-title"> Alta Usuarios</h1>
 {{csrf_field()}}
 
 @if($errors->first('idu'))
@@ -65,5 +72,6 @@ Confirmar Contraseña: <input type ='password' name = 'pass2' value="{{old('pass
 <input type='submit' value='Guardar'>
 <br>
 </form>
+</div>
 </body>
 </html>

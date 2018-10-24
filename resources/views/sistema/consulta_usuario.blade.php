@@ -4,13 +4,13 @@
 <br>
 <table border="1">
      <tr><td> Clave </td>
-     <tr><td> Nombre </td>
-     <tr><td> Apellido Paterno </td>
-     <tr><td> Apellido Materno </td>
-     <tr><td> Correo </td>
-     <tr><td> Usuario </td>
-     <tr><td> Contraseña </td>
-     <tr><td> Confirmar Contraseña </td>
+     <td> Nombre </td>
+     <td> Apellido Paterno </td>
+     <td> Apellido Materno </td>
+     <td> Correo </td>
+     <td> Usuario </td>
+     <td> Contraseña </td>
+     <td> Confirmar Contraseña </td>
      
     </tr>
     @foreach($usuarios as $us)
