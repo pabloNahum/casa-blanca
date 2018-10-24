@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\ventas;
-use APP\obras:
+use APP\obras;
 use App\clientes;
 
 class ventasController extends Controller

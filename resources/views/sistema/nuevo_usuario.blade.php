@@ -1,6 +1,5 @@
-@extends('sistema.principal')
-
-@section('contenido')
+<html>
+<body>
 <h1> Alta Usuarios</h1>
 <form action ="{{route ('guardausuario')}}" method = 'POST'>
 {{csrf_field()}}
@@ -66,4 +65,5 @@ Confirmar Contraseña: <input type ='password' name = 'pass2' value="{{old('pass
 <input type='submit' value='Guardar'>
 <br>
 </form>
-@stop
+</body>
+</html>
