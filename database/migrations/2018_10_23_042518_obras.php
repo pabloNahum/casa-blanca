@@ -29,10 +29,9 @@ class Obras extends Migration
    
     public function down()
     {
-<<<<<<< HEAD
+
         Schema::drop('obras');
-=======
-     Schema::drop('obras');
->>>>>>> 1f4acc1bd93a8d0b793a952a640147c35770e4a1
+
+
     }
 }
