@@ -28,17 +28,17 @@ class obrasController extends Controller
 					->with('idof', $idof);
 	}
 	
-	public function guardaobra(Request $save) {
-		$ido = Request->ido;
-		$nombre = Request->nombre;
-		$duracion = Request->duracion;
-		$cupo = Request->cupo;
-		$clasificacion = Request->clasificacion;
-		$fecha = Request->fecha;
-		$act = Request->act;
-		$hr = Request->hr;
+	public function guardaobra(Request $request) {
+		$ido = $request->ido;
+		$nombre = $request->nombre;
+		$duracion = $request->duracion;
+		$cupo = $request->cupo;
+		$clasificacion = $request->clasificacion;
+		$fecha = $request->fecha;
+		$act = $request->act;
+		$hr = $request->hr;
 		
-		$this->validate ($save, [
+		$this->validate ($request, [
 		'ido'=>'required|numeric',
 		'nombre'=>'required|alpha',
 		'duracion'=>'required|alpha',
@@ -48,14 +48,14 @@ class obrasController extends Controller
 		]);
 
 		$obra = new obras;
-		$obra->ido = Request->ido;
-		$obra->nombre = Request->nombre;
-		$obra->duracion = Request->duracion;
-		$obra->cupo = Request->cupo;
-		$obra->clasificacion = Request->clasificacion;
-		$obra->fecha = Request->fecha;
-		$obra->act = Request->id_act;
-		$obra->hr = Request->id_hor;
+		$obra->ido = $request->ido;
+		$obra->nombre = $request->nombre;
+		$obra->duracion = $request->duracion;
+		$obra->cupo = $request->cupo;
+		$obra->clasificacion = $request->clasificacion;
+		$obra->fecha = $request->fecha;
+		$obra->act = $request->id_act;
+		$obra->hr = $request->id_hor;
 		$obra->save();
 		
 		return view('sistema.guarda_obra');
