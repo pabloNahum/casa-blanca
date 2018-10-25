@@ -25,8 +25,9 @@ Route::get('/sistema/ventas', 'ventasController@principal');
 
 //------------- Formularios de Actores -------------\\
 
-Route::get('/sistema/actores/nuevo_actor');
-Route::get('/sistema/actores/consulta_actor');
+Route::get('/sistema/actores/nuevo_actor', 'actoresController@nuevoactor');
+Route::get('/sistema/actores/consulta_actor', 'actoresController@consultaactor');
+Route::POST('/sistema/actores/guarda_actor', 'actoresController@guardaactor')->name('guardaactor');
 
 //------------- Formularios de Clientes -------------\\
 
