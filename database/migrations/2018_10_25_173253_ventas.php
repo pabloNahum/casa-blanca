@@ -9,24 +9,22 @@ class Ventas extends Migration
     
     public function up()
     {
-        Schema::create('ventas', function (Blueprint $table) {
-			
+        Schema::create('ventas', function(Blueprint $table) {
 			$table->increments('idv');
-			$table->float('c_unit');
+			$table->String('c_unit');
 			$table->date('fecha_vta');
 			$table->integer('cant_bol');
 			$table->float('importe');
 			$table->String('descuento');
-			$table->integer('idc')->unsigned();
-			$table->foreign('idc')->references('idc')->on('clientes');
-			$table->integer('ido')->unsigned();
-			$table->foreign('ido')->references('ido')->on('obras');
+			$table->integer('id_cte')->unsigned();
+			$table->foreign('id_cte')->references('id_cli')->on('clientes');
+			$table->integer('id_obra')->unsigned();
+			$table->foreign('id_obra')->references('ido')->on('obras');
 			$table->rememberToken();
-            $table->timestamps();
+			$table->timestamps();
 		});
     }
 
-    
     public function down()
     {
         Schema::drop('ventas');

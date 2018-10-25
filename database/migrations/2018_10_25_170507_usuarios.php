@@ -9,19 +9,21 @@ class Usuarios extends Migration
     
     public function up()
     {
-        Schema::create('usuarios', function (Blueprint $table){
+        Schema::create('usuarios', function(Blueprint $table) {
 			$table->increments('idu');
-			$table->String('nom_usr');
-			$table->String('ap_usr');
-			$table->String('am_usr');
-			$table->String('user');
+			$table->String('nombre');
+			$table->String('ap');
+			$table->String('am');
+			$table->String('correo');
+			$table->String('usuario');
 			$table->String('pass');
 			$table->String('pass2');
 			$table->rememberToken();
-            $table->timestamps();
+			$table->timestamps();
 		});
     }
 
+    
     public function down()
     {
         Schema::drop('usuarios');

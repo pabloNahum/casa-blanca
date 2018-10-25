@@ -4,22 +4,21 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Horarios extends Migration
+class Clasificaciones extends Migration
 {
-    
     public function up()
     {
-        Schema::create('horarios', function(Blueprint $table) {
-			$table->increments('idh');
-			$table->time('hora');
+        Schema::create('clasificaciones', function(Blueprint $table) {
+			$table->increments('id_clas');
+			$table->String('clasificacion');
 			$table->rememberToken();
-            $table->timestamps();
+			$table->timestamps();
 		});
     }
 
     
     public function down()
     {
-         Schema::drop('horarios');
+        Schema::drop('clasificaciones');
     }
 }

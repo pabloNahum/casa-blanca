@@ -6,16 +6,17 @@ use Illuminate\Database\Migrations\Migration;
 
 class Clientes extends Migration
 {
+
     public function up()
     {
-        Schema::create('clientes', function (Blueprint $table) {
-			$table->increments('idc');
-			$table->String('nom_cte');
-			$table->String('ap_cte');
-			$table->String('am_cte');
-			$table->integer('telefono');
+        Schema::create('clientes', function(Blueprint $table){
+			$table->increments('id_cli');
+			$table->String('nombre');
+			$table->String('ap');
+			$table->String('am');
+			$table->String('telefono');
 			$table->rememberToken();
-            $table->timestamps();
+			$table->timestamps();
 		});
     }
 
