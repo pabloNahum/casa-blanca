@@ -19,8 +19,8 @@ class obrasController extends Controller
 									->get();
 		
 		$idof = $incid[0]->ido+1;
-		$actores = actores::orderBy('nom_act','asc')->get();
-		$horarios = horarios::orderBy('hora','asc')->get();
+		$actores = actores::orderBy('nombre','asc')->get();
+		$horarios = horarios::orderBy('horario','asc')->get();
 		
 		return view('sistema.nueva_obra')
 					->with('actores',$actores)
