@@ -18,25 +18,25 @@
 <br>
 
 Clave: <input type='text' name = 'idu' value="{{$idms}}" readonly='readonly'>
-@if($errors->first('nom_usr'))
-<i> {{$errors->first('nom_usr')}}</i>
+@if($errors->first('nombre'))
+<i> {{$errors->first('nombre')}}</i>
 @endif<br>
 <br>
-Nombre: <input type='text' name = 'nom_usr' value="{{old('nom_usr')}}">
-<br>
-
-
-@if($errors->first('ap_usr'))
-<i> {{$errors->first('ap_usr')}}</i>
-@endif<br>
-Apellido Paterno: <input type ='text' name = 'ap_usr' value="{{old('ap_usr')}}">
+Nombre: <input type='text' name = 'nombre' value="{{old('nombre')}}">
 <br>
 
 
-@if($errors->first('am_usr'))
-<i> {{$errors->first('am_usr')}}</i>
+@if($errors->first('ap'))
+<i> {{$errors->first('ap')}}</i>
 @endif<br>
-Apellido Materno: <input type ='text' name = 'am_usr' value="{{old('am_usr')}}">
+Apellido Paterno: <input type ='text' name = 'ap' value="{{old('ap')}}">
+<br>
+
+
+@if($errors->first('am'))
+<i> {{$errors->first('am')}}</i>
+@endif<br>
+Apellido Materno: <input type ='text' name = 'am' value="{{old('am')}}">
 <br>
 
 

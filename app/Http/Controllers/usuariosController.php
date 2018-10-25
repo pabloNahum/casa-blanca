@@ -24,9 +24,9 @@ return view ('sistema.nuevo_usuario')
 
     public function guardausuario(Request $request)
     {
-        $nom_usr= $request->nom_usr;
-        $ap_usr= $request->ap_usr;
-        $am_usr= $request->am_usr;
+        $nombre= $request->nombre;
+        $ap= $request->ap;
+        $am= $request->am;
         $correo= $request->correo;
         $usuario= $request->usuario;
         $pass= $request->pass;
@@ -35,10 +35,10 @@ return view ('sistema.nuevo_usuario')
 
         $this->validate ($request,[
             'idu'=>'required|numeric',
-            'nom_usr'=>'required|alpha',
+            'nombre'=>'required|alpha',
             'correo'=>'required|email',
-            'ap_usr'=>'required|string',
-            'am_usr'=>'required|string',
+            'ap'=>'required|string',
+            'am'=>'required|string',
             'usuario'=>'required|alpha',
             'pass'=>'required|alpha',
             'pass2'=>'required|alpha'
@@ -46,9 +46,9 @@ return view ('sistema.nuevo_usuario')
 
             $user =new usuarios;
             $user->idu = $request->idu;
-            $user->nom_usr = $request->nom_usr;
-            $user->ap_usr = $request->ap_usr;
-            $user->am_usr = $request->am_usr;
+            $user->nombre = $request->nombre;
+            $user->ap = $request->ap;
+            $user->am = $request->am;
             $user->correo = $request->correo;
             $user->usuario = $request->usuario;
             $user->pass = $request->pass;
@@ -62,7 +62,7 @@ return view ('sistema.nuevo_usuario')
 
 public function consultausuario()
     {
-        $usuario=usuarios::orderBy('nom_usr','des')->get();
+        $usuario=usuarios::orderBy('nombre','asc')->get();
         return view ('sistema.consulta_usuario')
         ->with('usuarios',$usuario);
     }
