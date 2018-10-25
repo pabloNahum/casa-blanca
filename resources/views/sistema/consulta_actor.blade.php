@@ -20,7 +20,7 @@
    @foreach($actores as $act)
    <tr>
       <td>{{$act->ida}}</td>
-      <td><img src="{{asset('archivos/' .$act->archivo)}}" height=50 width=50></td>
+      <td><img src="{{asset('archivo/' .$act->archivo)}}" height=50 width=50></td>
       <td>{{$act->nombre}}</td>
       <td>{{$act->ap}}</td>
       <td>{{$act->am}}</td>

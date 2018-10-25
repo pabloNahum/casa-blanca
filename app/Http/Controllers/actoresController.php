@@ -39,7 +39,7 @@ class actoresController extends Controller
 			'foto'=>'image|mimes:jpg,jpeg,png'
 		]);
 
-		$file = $datos->file('archivos');
+		$file = $datos->file('archivo');
 		if($file!="") {
 			$ldate= date('Ymd_His_');
 			$img = $file->getClientOriginalName();
