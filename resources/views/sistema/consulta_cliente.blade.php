@@ -1,6 +1,6 @@
 <html>
 <body>
-	<h1>Reporte de Maestros</h1>
+	<h1>Consulta Clientes</h1>
 	<br>
 	<table border="1">
 		<tr>
@@ -12,7 +12,7 @@
 		</tr>
 			@foreach($clientes as $cte)
 		<tr>
-			<td align="center">{{$cte->idm}}</td>
+			<td align="center">{{$cte->idc}}</td>
 			<td>{{$cte->nom_cte}}</td>
 			<td>{{$cte->ap_cte}}</td>
 			<td>{{$cte->am_cte}}</td>
