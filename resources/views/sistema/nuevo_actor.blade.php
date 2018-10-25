@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 </head>
 <body>
-    <form action ="{{route ('guardaactor')}}" method = 'POST'/>
+    <form action ="{{route ('guardaactor')}}" method = 'POST' enctype='multipart/form-data'>
         <h2>Nuevo Actor</h2>
         {{csrf_field()}}
 
