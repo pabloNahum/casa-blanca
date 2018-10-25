@@ -49,13 +49,13 @@
 				<label for="id_act">Seleccione Actor</label></br>
 				<select name='id_act'>
 				@foreach($actores as $act)
-				<option value= '{{$act->id_act}}'>{{$act->nom_act}}</option>
+				<option value= '{{$act->ida}}'>{{$act->nombre}}</option>
 				@endforeach
 				</select><br></br>
 				<label for="id_act">Seleccione Horario</label></br>
 				<select name='id_act'>
 				@foreach($horarios as $hr)
-				<option value= '{{$act->id_act}}'>{{$hr->hora}}</option>
+				<option value= '{{$act->idh}}'>{{$hr->horario}}</option>
 				@endforeach
 				</select><br></br>
 				
