@@ -62,12 +62,12 @@ class actoresController extends Controller
 		$subida = "Alta de Actor";
 		$mensaje = "Actor registrado exitosamente.";
 		return view("sistema.mensaje")
-            ->with('proceso',$proceso)
+            ->with('proceso',$subida)
             ->with('mensaje',$mensaje);
 	}
 
 	public function consultaactor() {
-		$actor = actores::orderBy('nombre', 'desc')->get();
+		$actor = actores::orderBy('ida', 'asc')->get();
 		return view("sistema.consulta_actor")
 		->with('actores', $actor);
 	}
