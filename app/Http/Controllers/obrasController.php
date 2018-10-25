@@ -64,6 +64,6 @@ class obrasController extends Controller
 	public function consultaobra() {
 		$obra=obras::orderBy('nombre', 'des')->get();
 		return view('sistema.consulta_obra')
-		->with('obras', $obras);
+		->with('obra', $obra);
 	}
 }

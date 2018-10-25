@@ -8,7 +8,7 @@
 	</head>
 	<body>
 		<div id="altas_user-div">
-			<form id="altas_user-form" action="{{route ('/sistema/obras/guarda_obra')}}" method = 'POST' enctype='multipart/form-data'>
+			<form id="altas_user-form" action="{{route ('/sistema/obras/guarda_obra')}}" method = 'POST'>
 				<h2 id="form-title">Nueva Obra</h2>
 				<input type="text" placeholder="ID de Obra" name="ido" disabled /><br></br>
 				<input type="text" placeholder="Nombre" name="nombre" disabled/><br></br>
