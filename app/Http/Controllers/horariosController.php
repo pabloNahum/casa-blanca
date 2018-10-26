@@ -7,5 +7,6 @@ use App\Http\Controllers\Controller;
 
 class horariosController extends Controller
 {
-    //
+    public function nuevohorario(){
+	}
 }
