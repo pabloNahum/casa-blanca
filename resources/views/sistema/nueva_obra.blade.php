@@ -30,6 +30,7 @@
 				 @if($errors->first('archivo'))
 				<i> {{$errors->first('archivo')}}</i>
 				@endif
+				<label for = "archivo">Cargar Poster </label>
 				<input type="file" name="archivo"/><br><br>
 				
 				@if($errors->first('fecha'))

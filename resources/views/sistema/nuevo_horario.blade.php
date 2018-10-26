@@ -24,7 +24,7 @@
 				@endif
 				<input type="time" name="horario" /><br></br>
 		
-				<label>Seleccione Clasificación</label></br>
+				<label>Seleccione Obra</label></br>
 				<select name='ido'>
 				@foreach($obras as $o)
 				<option value= '{{$o->ido}}'>{{$o->nombre}}</option>

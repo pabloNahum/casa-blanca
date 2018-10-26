@@ -21,7 +21,7 @@ class horariosController extends Controller
 		$id_obra = $request -> id_obra;        
 
 			$this -> validate($request,[
-				'idc' => 'required|numeric',
+				'idh' => 'required|numeric',
 				'horario' => 'required',
 			]);
 			
@@ -34,11 +34,13 @@ class horariosController extends Controller
 		$subida = "Alta horarios";
 		$mensaje = "horario registrado exitosamente.";
 		return view("sistema.mensaje")
-            ->with('proceso',$subida)
+            ->with('subida',$subida)
             ->with('mensaje',$mensaje);
 	}
 	
 	 public function consultahorario(){
-		
+		$horario = horarios::orderBy('horario', 'asc')->get();
+		return view('sistema.consulta_horario')
+		->with('horario', $horario);
 	}
 }
