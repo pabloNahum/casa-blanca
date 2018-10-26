@@ -46,7 +46,7 @@ class clientesController extends Controller
 			$subida = "Alta Cliente";
 		$mensaje = "Cliente registrado exitosamente.";
 		return view("sistema.mensaje")
-            ->with('proceso',$subida)
+            ->with('subida',$subida)
             ->with('mensaje',$mensaje);
 			
 	}
