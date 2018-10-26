@@ -23,7 +23,7 @@ class clientesController extends Controller
 		// Extraccion de los datos por metodo post
 		$idc = $request -> idc;
 		$nom_cte = $request -> nom_cte;
-		$ap_cte = $request -> ap_cte;+
+		$ap_cte = $request -> ap_cte;
 		$am_cte = $request -> am_cte;
 		$telefono = $request -> telefono;
 		//no se recibe el archivo

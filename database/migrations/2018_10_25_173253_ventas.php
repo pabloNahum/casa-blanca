@@ -17,7 +17,7 @@ class Ventas extends Migration
 			$table->float('importe');
 			$table->String('descuento');
 			$table->integer('id_cte')->unsigned();
-			$table->foreign('id_cte')->references('id_cli')->on('clientes');
+			$table->foreign('id_cte')->references('idc')->on('clientes');
 			$table->integer('id_obra')->unsigned();
 			$table->foreign('id_obra')->references('ido')->on('obras');
 			$table->rememberToken();
