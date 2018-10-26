@@ -72,7 +72,7 @@ class actoresController extends Controller
 		->with('actores', $actor);
 	}
 
-	public function modificaactor($ida) {
+	/*public function modificaactor($ida) {
 		$actor = actores::where('ida', '=', $ida)->get();
 		$ido = $actor[0]->ido;
 		$obra = obras::where('ido', '=', $ido)->get();
@@ -131,5 +131,5 @@ class actoresController extends Controller
 		return view('sistema.mensaje')
             ->with('eliminacion',$eliminaciion)
             ->with('mensaje',$mensaje);
-	}
+	}*/
 }
