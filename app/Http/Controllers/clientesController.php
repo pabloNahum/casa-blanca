@@ -43,6 +43,12 @@ class clientesController extends Controller
 			$cte -> telefono = $request->telefono;
 			$cte -> save();
 			
+			$subida = "Alta Cliente";
+		$mensaje = "Cliente registrado exitosamente.";
+		return view("sistema.mensaje")
+            ->with('proceso',$subida)
+            ->with('mensaje',$mensaje);
+			
 	}
 	
 	public function consultacliente()

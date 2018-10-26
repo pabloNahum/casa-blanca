@@ -1,31 +1,38 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Alta Obras | Casa Blanca</title>
-		<meta charset="utf-8" />
-		<link rel="stylesheet" type="text/css" href="../CSS/forms.css" />
-		<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet" />
-	</head>
-	<body>
-		<div id="altas_user-div">
-			<form id="altas_user-form" action="{{route ('/sistema/obras/guarda_obra')}}" method = 'POST'>
-				<h2 id="form-title">Nueva Obra</h2>
-				<input type="text" placeholder="ID de Obra" name="ido" disabled /><br></br>
-				<input type="text" placeholder="Nombre" name="nombre" disabled/><br></br>
-				<input type="text" placeholder="Duaración" name="duracion" disabled/><br></br>
-				<input type="text" placeholder="Cupo" name="cupo" disabled/><br></br>
-				<input type="text" placeholder="Clasificación" name="casificacion" disabled/><br></br>
-				<input type="date" placeholder="Fecha" name="fecha" disabled/><br></br>
-				<input type="text" placeholder="Descripción" name="descripcion" disabled/><br></br>
-				<label for="id_act">Seleccione Actor</label></br>
-				<select name='id_act'>
-				@foreach($actores as $act)
-				<option value= '{{$act->id_act}}'>{{$act->nom_act}}</option>
-				@endforeach
-				</select><br></br>
-				<input type="submit" value="Modificar" name="btn_mod"/>
-				<input type="submit" value="Eliminar" name="btn_eliminar"/>
-			</form>
-		</div>
-	</body>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Consulta Obra | Casa Blanca</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+<h1> Consulta de Obras </h1>
+<table border="1">
+    <tr><td>Clave</td>
+         <td>cartel</td>
+         <td>nombre</td>
+         <td>duracion</td>
+         <td>fecha</td>
+         <td>descripcion</td>
+		 <td>foro</td>
+		 <td>clasificacion</td>
+    </tr>
+   @foreach($obra as $act)
+   <tr>
+      <td>{{$act->ido}}</td>
+      <td><img src="{{asset('cartelera/' .$act->cartel)}}" height=50 width=50></td>
+      <td>{{$act->nombre}}</td>
+      <td>{{$act->duracion}}</td>
+	  <td>{{$act->fecha}}</td>
+      <td>{{$act->descripcion}}</td>
+	  <td>{{$act->id_foro}}</td>
+	  <td>{{$act->id_clas}}</td>
+        </tr>
+    @endforeach
+
+</table>
+</body>
 </html>

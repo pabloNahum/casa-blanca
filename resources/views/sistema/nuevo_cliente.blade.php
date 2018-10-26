@@ -1,5 +1,6 @@
 <html>
 <body>
+<h1>Alta Clientes</h1>
 <form action="{{route('guardacliente')}}" method="POST">
 	{{csrf_field()}}
 	@if($errors->first('idc'))

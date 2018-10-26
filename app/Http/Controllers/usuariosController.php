@@ -56,7 +56,11 @@ return view ('sistema.nuevo_usuario')
             $user->save(); 
 
         
-            
+            $subida = "Alta Usuarios";
+		$mensaje = "Usuario registrado exitosamente.";
+		return view("sistema.mensaje")
+            ->with('proceso',$subida)
+            ->with('mensaje',$mensaje);
         
 }
 

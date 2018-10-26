@@ -8,14 +8,14 @@
 	</head>
 	<body>
 		<div id="altas_user-div">
-			<form id="altas_user-form" action="{{route ('guardaobra') }}" method = 'POST' enctype='multipart/form-data'>
+			<form id="altas_user-form" action="{{route ('guardaobra') }}" method='POST' enctype='multipart/form-data'>
 				<h2 id="form-title">Nueva Obra</h2>
 				{{csrf_field()}}
 				
 				@if($errors->first('ido'))
 				<i> {{$errors->first('ido')}}</i>
 				@endif
-				<input type="text" placeholder="ID de Obra" name="ido" disabled  value="{{$idof}}" /><br></br>
+				<input type="text" placeholder="ID de Obra" name="ido" readonly  value="{{$idof}}" /><br></br>
 				
 				@if($errors->first('nombre'))
 				<i> {{$errors->first('nombre')}}</i>
@@ -27,15 +27,10 @@
 				@endif
 				<input type="text" placeholder="Duaración" name="duracion" /><br></br>
 				
-				@if($errors->first('cupo'))
-				<i> {{$errors->first('cupo')}}</i>
+				 @if($errors->first('archivo'))
+				<i> {{$errors->first('archivo')}}</i>
 				@endif
-				<input type="text" placeholder="Cupo" name="cupo" /><br></br>
-				
-				@if($errors->first('clasificacion'))
-				<i> {{$errors->first('clasificacion')}}</i>
-				@endif
-				<input type="text" placeholder="Clasificación" name="casificacion" /><br></br>
+				<input type="file" name="archivo"/><br><br>
 				
 				@if($errors->first('fecha'))
 				<i> {{$errors->first('fecha')}}</i>
@@ -46,16 +41,16 @@
 				<i> {{$errors->first('descripcion')}}</i>
 				@endif
 				<input type="text" placeholder="Descripción" name="descripcion" /><br></br>
-				<label for="id_act">Seleccione Actor</label></br>
-				<select name='id_act'>
-				@foreach($actores as $act)
-				<option value= '{{$act->ida}}'>{{$act->nombre}}</option>
+				<label for="id_act">Seleccione Foro</label></br>
+				<select name='idf'>
+				@foreach($foros as $f)
+				<option value= '{{$f->idf}}'>{{$f->foro}}</option>
 				@endforeach
 				</select><br></br>
-				<label for="id_act">Seleccione Horario</label></br>
-				<select name='id_act'>
-				@foreach($horarios as $hr)
-				<option value= '{{$act->idh}}'>{{$hr->horario}}</option>
+				<label for="id_act">Seleccione Clasificación</label></br>
+				<select name='id_clas'>
+				@foreach($clasificaciones as $class)
+				<option value= '{{$class->id_clas}}'>{{$class->clasificacion}}</option>
 				@endforeach
 				</select><br></br>
 				

@@ -47,6 +47,11 @@ return [
             'driver' => 'local',
             'root' => public_path('archivo'),
         ],
+		
+		 'obras' => [
+            'driver' => 'local',
+            'root' => public_path('cartelera'),
+        ],
 
         'public' => [
             'driver' => 'local',

@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\obras;
-use App\horarios;
-use App\actores;
+use App\foros;
+use App\clasificaciones;
 
 class obrasController extends Controller
 {
@@ -19,12 +19,12 @@ class obrasController extends Controller
 									->get();
 		
 		$idof = $incid[0]->ido+1;
-		$actores = actores::orderBy('nombre','asc')->get();
-		$horarios = horarios::orderBy('horario','asc')->get();
+		$foros = foros::orderBy('foro','asc')->get();
+		$clasificaciones = clasificaciones::orderBy('clasificacion','asc')->get();
 		
 		return view('sistema.nueva_obra')
-					->with('actores',$actores)
-					->with('horarios',$horarios)
+					->with('foros',$foros)
+					->with('clasificaciones',$clasificaciones)
 					->with('idof', $idof);
 	}
 	
@@ -32,33 +32,46 @@ class obrasController extends Controller
 		$ido = $request->ido;
 		$nombre = $request->nombre;
 		$duracion = $request->duracion;
-		$cupo = $request->cupo;
-		$clasificacion = $request->clasificacion;
 		$fecha = $request->fecha;
-		$act = $request->act;
-		$hr = $request->hr;
+		$descripcion = $request->descripcion;
+		$id_foro= $request->id_foro;        
+		$id_clas= $request->id_clas;
 		
 		$this->validate ($request, [
 		'ido'=>'required|numeric',
-		'nombre'=>'required|alpha',
+		'nombre'=>'required|string|max:60',
+		'descripcion'=>'required|string|max:60',
 		'duracion'=>'required|alpha',
-		'cupo'=>'required|numeric',
-		'clasificacion'=>'required|alpha',
 		'fecha'=>'required|date',
+		'cartel'=>'image|mimes:jpg,jpeg,png'
 		]);
-
+		$file = $request ->file('archivo');
+		if($file!="") {
+			$ldate= date('Ymd_His_d');
+			$img = $file->getClientOriginalName();
+			$img2 = $ldate.$img;
+			\Storage::disk('obras')->put($img2, \File::get($file));
+		}
+		else{
+			$img2='default.png';
+		}
+		
 		$obra = new obras;
 		$obra->ido = $request->ido;
+		$obra->cartel = $img2;
 		$obra->nombre = $request->nombre;
 		$obra->duracion = $request->duracion;
-		$obra->cupo = $request->cupo;
-		$obra->clasificacion = $request->clasificacion;
+		$obra->descripcion = $request->descripcion;
 		$obra->fecha = $request->fecha;
-		$obra->act = $request->id_act;
-		$obra->hr = $request->id_hor;
+		$obra->id_foro = $request->idf;
+		$obra->id_clas = $request->id_clas;
 		$obra->save();
 		
-		return view('sistema.guarda_obra');
+		$subida = "Alta  Obra";
+		$mensaje = "Obra registrada exitosamente.";
+		return view("sistema.mensaje")
+            ->with('proceso',$subida)
+            ->with('mensaje',$mensaje);
 	}
 	
 	public function consultaobra() {
