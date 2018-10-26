@@ -1,23 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-<h1> Consulta Actores </h1>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Consulta Actor | Casa Blanca</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+	<script src="http://code.jquery.com/jquery-latest.min.js"type="text/javascript"></script>
+    <link rel="stylesheet" href="{{ asset('assets/tabla/demo_table.css') }}" />
+	 <script type="text/javascript" language="javascript" src="{{ asset('assets/tabla/jquery.dataTables.js')}}"></script>
+	<script type="text/javascript" language="javascript" src="{{ asset('assets/tabla/jslistadopaises.js')}}"></script>
 </head>
 <body>
-<table border="1">
-    <tr><td>Clave</td>
-         <td>Foto</td>
-         <td>Nombre</td>
-         <td>Apellido Paterno</td>
-         <td>Apellido Materno</td>
-         <td>Obra</td>
-    </tr>
+<h1 align="center">Consulta Actores</h1>
+<article id="contenido">
+<table cellpadding="0" cellspacing="0" border="0" class="display" id="tabla_lista_paises">
+<thead>
+         <tr> 
+		     <th>Clave</th>
+             <th>Foto</th>
+             <th>Nombre</th>
+             <th>Apellido Paterno</th>
+             <th>Apellido Materno</th>
+             <th>Obra</th>
+         </tr>
+</thead>	
+<tfoot>
+         <tr>
+             <th></th>
+             <th></th>                                        
+         </tr>
+</tfoot>
+<tbody>
    @foreach($actores as $act)
    <tr>
       <td>{{$act->ida}}</td>
@@ -26,9 +36,10 @@
       <td>{{$act->ap}}</td>
       <td>{{$act->am}}</td>
       <td>{{$act->id_obra}}</td>
-        </tr>
+   </tr>
     @endforeach
-
+</tbody>	
 </table>
+<article>
 </body>
 </html>

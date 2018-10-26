@@ -70,7 +70,7 @@ class obrasController extends Controller
 		$subida = "Alta  Obra";
 		$mensaje = "Obra registrada exitosamente.";
 		return view("sistema.mensaje")
-            ->with('proceso',$subida)
+            ->with('subida',$subida)
             ->with('mensaje',$mensaje);
 	}
 	
