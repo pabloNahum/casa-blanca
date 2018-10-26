@@ -29,6 +29,12 @@ Route::get('/sistema/actores/nuevo_actor', 'actoresController@nuevoactor');
 Route::get('/sistema/actores/consulta_actor', 'actoresController@consultaactor');
 Route::POST('/sistema/actores/guarda_actor', 'actoresController@guardaactor')->name('guardaactor');
 
+//------------- Formularios de Horarios -------------\\
+
+Route::get('/sistema/horarios/nuevo_horario', 'horariosController@nuevohorario');
+Route::get('/sistema/horarios/consulta_horario', 'horariosController@consultahorario');
+Route::POST('/sistema/horarios/guarda_horario', 'horariosController@guardahorario')->name('guardahorario');
+
 //------------- Formularios de Clientes -------------\\
 
 Route::get('/sistema/clientes/nuevo_cliente', 'clientesController@nuevocliente');
