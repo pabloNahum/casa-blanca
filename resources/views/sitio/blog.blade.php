@@ -6,13 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Blog | Casa Blanca</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/pagina/css/main.css" />
 </head>
 <body>
     @section('header')
             <section class="banner full">
             <article>
-					<img src="images/slide01.jpg" alt="" />
+					<img src="../images/slide01.jpg" alt="" />
 					<div class="inner">
 						<header>
 							<p>A free responsive web site template by <a href="https://templated.co">TEMPLATED</a></p>
@@ -28,22 +28,22 @@
 					<div class="gallery">
 						<div>
 							<div class="image fit">
-								<a href="#"><img src="images/pic01.jpg" alt="" /></a>
+								<a href="#"><img src="../images/pic01.jpg" alt="" /></a>
 							</div>
 						</div>
 						<div>
 							<div class="image fit">
-								<a href="#"><img src="images/pic02.jpg" alt="" /></a>
+								<a href="#"><img src="../images/pic02.jpg" alt="" /></a>
 							</div>
 						</div>
 						<div>
 							<div class="image fit">
-								<a href="#"><img src="images/pic03.jpg" alt="" /></a>
+								<a href="#"><img src="../images/pic03.jpg" alt="" /></a>
 							</div>
 						</div>
 						<div>
 							<div class="image fit">
-								<a href="#"><img src="images/pic04.jpg" alt="" /></a>
+								<a href="#"><img src="../images/pic04.jpg" alt="" /></a>
 							</div>
 						</div>
 					</div>
