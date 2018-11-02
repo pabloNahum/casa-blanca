@@ -59,7 +59,7 @@ return view ('sistema.nuevo_usuario')
             $subida = "Alta Usuarios";
 		$mensaje = "Usuario registrado exitosamente.";
 		return view("sistema.mensaje")
-            ->with('proceso',$subida)
+            ->with('subida',$subida)
             ->with('mensaje',$mensaje);
         
 }

@@ -62,7 +62,7 @@ class actoresController extends Controller
 		$subida = "Alta de Actor";
 		$mensaje = "Actor registrado exitosamente.";
 		return view("sistema.mensaje")
-            ->with('proceso',$subida)
+            ->with('subida',$subida)
             ->with('mensaje',$mensaje);
 	}
 
