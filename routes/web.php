@@ -17,6 +17,7 @@ Route::get('/', function () {
 
 //------------- Vistas de Sistema -------------\\
 
+Route::get('/sistema', 'sistemaController@principal');
 Route::get('/sistema/actores', 'actoresController@principal');
 Route::get('/sistema/clientes', 'clientesController@principal');
 Route::get('/sistema/obras', 'obrasController@principal');
