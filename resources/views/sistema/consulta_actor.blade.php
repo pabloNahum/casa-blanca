@@ -4,47 +4,74 @@
 <head>
     <title>Consulta Actor | Casa Blanca</title>
 </head>
-@section('master')
 <body>
-           <!-- Static Table Start -->
-           <div class="data-table-area mg-b-15">
+@section('tablas')
+<!-- Search Bar start -->
+    <div class="breadcome-area">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="breadcome-list single-page-breadcome">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="breadcome-heading">
+                                    <form role="search" class="sr-input-func">
+                                        <input type="text" placeholder="Buscar..." class="search-int form-control">
+                                            <a href="#"><i class="fa fa-search"></i></a>
+                                        </form>
+                                    </div>
+                                </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <ul class="breadcome-menu">
+                                    <li><a href="#">Inicio</a> <span class="bread-slash">/</span>
+                                    </li>
+                                    <li><span class="bread-blod">Consultar Actores</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+           </div>
+        </div>
+    </div>
+<!-- Search bar end -->
+<!-- Static Table Start -->
+<div class="static-table-area" align="center">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div class="sparkline13-list">
-                            <div class="sparkline13-hd">
-                                <div class="main-sparkline13-hd">
-                                    <h1>Tabla <span class="table-project-n">De</span> Actores</h1>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="sparkline8-list">
+                            <div class="sparkline8-hd">
+                                <div class="main-sparkline8-hd">
+                                    <h1>Lista de Actores</h1>
                                 </div>
                             </div>
-                            <div class="sparkline13-graph">
-                                <div class="datatable-dashv1-list custom-datatable-overright">
-                                    <div id="toolbar">
-                                        <select class="form-control dt-tb">
-											<option value="">Exportación Básica</option>
-											<option value="all">Exportar Todo</option>
-											<option value="selected">Exportar Selección</option>
-										</select>
-                                    </div>
-                                    <table id="table" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true" data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true"
-                                        data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar">
+                            <div class="sparkline8-graph">
+                                <div class="static-table-list">
+                                    <table class="table">
                                         <thead>
-                                            <th>Foto</th>
-                                            <th>Nombre</th>
-                                            <th>Apellido Paterno</th>
-                                            <th>Apellido Materno</th>
-                                            <th>Obra</th>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Foto</th>
+                                                <th>Nombre</th>
+                                                <th>Apellido Paterno</th>
+                                                <th>Apellido Materno</th>
+                                                <th>Obra</th>
+                                                <th>Acciones</th>
+                                            </tr>
                                         </thead>
                                         <tbody>
                                         @foreach($actores as $act)
-                                        <tr>
-                                            <td>{{$act->ida}}</td>
-                                            <td><img src="{{asset('archivo/' .$act->archivo)}}" height=50 width=50></td>
-                                            <td>{{$act->nombre}}</td>
-                                            <td>{{$act->ap}}</td>
-                                            <td>{{$act->am}}</td>
-                                            <td>{{$act->id_obra}}</td>
-                                        </tr>
+                                            <tr>
+                                                <td>{{$act->ida}}</td>
+                                                <td><img src="{{asset('archivo/' .$act->archivo)}}" height=50 width=50></td>
+                                                <td>{{$act->nombre}}</td>
+                                                <td>{{$act->ap}}</td>
+                                                <td>{{$act->am}}</td>
+                                                <td>{{$act->id_obra}}</td>
+                                                
+                                            </tr>
                                         @endforeach
                                         </tbody>
                                     </table>
@@ -55,7 +82,9 @@
                 </div>
             </div>
         </div>
-        <!-- Static Table End -->
-</body>
+    </div>
+</div>
+<!-- Static table end -->
 @stop
+</body>
 </html>

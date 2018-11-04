@@ -1,3 +1,4 @@
+@extends ('sistema.master')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,8 +23,7 @@
 <!--===============================================================================================-->
 </head>
 <body>
-
-
+@section ('tablas')
 	<div class="bg-contact2" style="background-image: url('../../assets/forms/images/teatro.jpg');">
 		<div class="container-contact2">
 			<div class="wrap-contact2">
@@ -70,9 +70,7 @@
 			</div>
 		</div>
 	</div>
-
-
-
+@stop
 <!--===============================================================================================-->
 	<script src="{{asset('assets/forms/vendor/jquery/jquery-3.2.1.min.js')}}"></script>
 <!--===============================================================================================-->

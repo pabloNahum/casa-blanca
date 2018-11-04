@@ -9,60 +9,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon
 		============================================ -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('img/favicon.png') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/sistema/img/favicon.png') }}">
     <!-- Google Fonts
 		============================================ -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
     <!-- Bootstrap CSS
 		============================================ -->
-    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/sistema/css/bootstrap.min.css') }}">
     <!-- Bootstrap CSS
 		============================================ -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <!-- owl.carousel CSS
 		============================================ -->
-    <link rel="stylesheet" href="{{ asset('css/owl.carousel.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/owl.theme.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/owl.transitions.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/sistema/css/owl.carousel.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/sistema/css/owl.theme.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/sistema/css/owl.transitions.css') }}">
     <!-- animate CSS
 		============================================ -->
-    <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/sistema/css/animate.css') }}">
     <!-- normalize CSS
 		============================================ -->
-    <link rel="stylesheet" href="{{ asset('css/normalize.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/sistema/css/normalize.css') }}">
     <!-- meanmenu icon CSS
 		============================================ -->
-    <link rel="stylesheet" href="{{ asset('css/meanmenu.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/sistema/css/meanmenu.min.css') }}">
     <!-- main CSS
 		============================================ -->
-    <link rel="stylesheet" href="{{ asset('css/main.css')}}">
+    <link rel="stylesheet" href="{{ asset('assets/sistema/css/main.css')}}">
     <!-- morrisjs CSS
 		============================================ -->
-    <link rel="stylesheet" href="{{ asset('css/morrisjs/morris.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/sistema/css/morrisjs/morris.css') }}">
     <!-- mCustomScrollbar CSS
 		============================================ -->
-    <link rel="stylesheet" href="{{ asset('css/scrollbar/jquery.mCustomScrollbar.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/sistema/css/scrollbar/jquery.mCustomScrollbar.min.css') }}">
     <!-- metisMenu CSS
 		============================================ -->
-    <link rel="stylesheet" href="{{ asset('css/metisMenu/metisMenu.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/metisMenu/metisMenu-vertical.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/sistema/css/metisMenu/metisMenu.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/sistema/css/metisMenu/metisMenu-vertical.css') }}">
     <!-- calendar CSS
 		============================================ -->
-    <link rel="stylesheet" href="{{ asset('css/calendar/fullcalendar.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/calendar/fullcalendar.print.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/sistema/css/calendar/fullcalendar.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/sistema/css/calendar/fullcalendar.print.min.css') }}">
     <!-- style CSS
 		============================================ -->
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/sistema/css/style.css') }}">
     <!-- responsive CSS
 		============================================ -->
-    <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/sistema/css/responsive.css') }}">
     <!-- modernizr JS
 		============================================ -->
-    <script src="{{ asset('js/vendor/modernizr-2.8.3.min.js') }}"></script>
+    <script src="{{ asset('assets/sistema/js/vendor/modernizr-2.8.3.min.js') }}"></script>
 </head>
 
 <body>
-@yield('sistema')
     <!--[if lt IE 8]>
 		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
@@ -70,20 +69,12 @@
     <div class="left-sidebar-pro">
         <nav id="sidebar" class="">
             <div class="sidebar-header">
-                <a href="{{ url('/sistema') }}"><img class="main-logo" src="{{ asset('img/logo/logo.png') }}" alt="" /></a>
-                <strong><a href="{{ url('/sistema') }}"><img src="{{ asset('img/logo/logosn.png') }}" alt="" /></a></strong>
+                <a href="{{ url('/sistema') }}"><img class="main-logo" src="{{ asset('assets/sistema/img/logo/logo.png') }}" alt="" /></a>
+                <strong><a href="{{ url('/sistema') }}"><img src="{{ asset('assets/sistema/img/logo/logosn.png') }}" alt="" /></a></strong>
             </div>
             <div class="left-custom-menu-adp-wrap comment-scrollbar">
                 <nav class="sidebar-nav left-sidebar-menu-pro">
                     <ul class="metismenu" id="menu1">
-                        <li class="active">
-                            <a class="has-arrow" href="{{ url('/sistema') }}">
-								   <span class="mini-click-non">Inicio </span><i class="fas fa-home"></i>
-								</a>
-                            <ul class="submenu-angle" aria-expanded="true">
-                                <li><a title="Perfil" href="#">Perfil</a></li>
-                            </ul>
-                        </li>
                         <li>
                             <a title="Reporte" href="#" aria-expanded="false"><span class="mini-click-non">Reporte </span><i class="fa fa-chart-line"></i></a>
                         </li>
@@ -103,6 +94,15 @@
                                 <li><a title="Agregar Obra" href="{{ url('/sistema/obras/nueva_obra') }}"><span class="mini-sub-pro">Nueva Obra</span></a></li>
                                 <li><a title="Modificar Obra" href="{{ url('/sistema/obras/modifica_obra') }}"><span class="mini-sub-pro">Editar Obra</span></a></li>
                                 <li><a title="Borrar Obra" href="{{ url('/sistema/obras/elimina_obra') }}"><span class="mini-sub-pro">Eliminar Obra</span></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="has-arrow" href="#" aria-expanded="false"><span class="mini-click-non">Horarios </span><i class="far fa-clock"></i></a>
+                            <ul class="submenu-angle" aria-expanded="false">
+                                <li><a title="Ver Horarios" href="{{ url('/sistema/horarios/consulta_horario') }}"><span class="mini-sub-pro">Consultar Horarios</span></a></li>
+                                <li><a title="Agregar Horario" href="{{ url('/sistema/horarios/nuevo_horario') }}"><span class="mini-sub-pro">Nuevo Horario</span></a></li>
+                                <li><a title="Modificar Horario" href="{{ url('/sistema/horarios/modifica_horario') }}"><span class="mini-sub-pro">Editar Horario</span></a></li>
+                                <li><a title="Borrar Horario" href="{{ url('/sistema/horarios/elimina_horario') }}"><span class="mini-sub-pro">Eliminar Horario</span></a></li>
                             </ul>
                         </li>
                         <li>
@@ -135,7 +135,7 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="logo-pro">
-                        <a href="index.html"><img class="main-logo" src="{{ asset('img/logo/logo.png') }}" alt="" /></a>
+                        <a href="index.html"><img class="main-logo" src="{{ asset('assets/sistema/img/logo/logo.png') }}" alt="" /></a>
                     </div>
                 </div>
             </div>
@@ -159,7 +159,7 @@
                                             <ul class="nav navbar-nav mai-top-nav header-right-menu">
                                                 <li class="nav-item">
                                                     <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
-															<img src="{{ asset('img/product/pro4.jpg') }}" alt="" />
+															<img src="{{ asset('assets/sistema/img/product/pro4.jpg') }}" alt="" />
 															<span class="admin-name">Admin</span>
 															<i class="fa fa-angle-down edu-icon edu-down-arrow"></i>
 														</a>
@@ -250,34 +250,7 @@
                 </div>
             </div>
             <!-- Mobile Menu end -->
-            <!-- Search Bar start--><div class="breadcome-area">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="breadcome-list single-page-breadcome">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                        <div class="breadcome-heading">
-                                            <form role="search" class="sr-input-func">
-                                                <input type="text" placeholder="Buscar..." class="search-int form-control">
-                                                <a href="#"><i class="fa fa-search"></i></a>
-                                            </form>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                        <ul class="breadcome-menu">
-                                            <li><a href="{{ url('/sistema') }}">Inicio</a> <span class="bread-slash"></span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-            
+        @yield('tablas')      
             <!-- Footer Starts -->
             <div class="footer-copyright-area">
             <div class="container-fluid">
@@ -295,63 +268,63 @@
 
      <!-- jquery
 		============================================ -->
-        <script src="{{ asset('js/vendor/jquery-1.12.4.min.js') }}"></script>
+        <script src="{{ asset('assets/sistema/js/vendor/jquery-1.12.4.min.js') }}"></script>
     <!-- bootstrap JS
 		============================================ -->
-    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('assets/sistema/js/bootstrap.min.js') }}"></script>
     <!-- wow JS
 		============================================ -->
-    <script src="{{ asset('js/wow.min.js') }}"></script>
+    <script src="{{ asset('assets/sistema/js/wow.min.js') }}"></script>
     <!-- price-slider JS
 		============================================ -->
-    <script src="{{ asset('js/jquery-price-slider.js') }}"></script>
+    <script src="{{ asset('assets/sistema/js/jquery-price-slider.js') }}"></script>
     <!-- meanmenu JS
 		============================================ -->
-    <script src="{{ asset('js/jquery.meanmenu.js') }}"></script>
+    <script src="{{ asset('assets/sistema/js/jquery.meanmenu.js') }}"></script>
     <!-- owl.carousel JS
 		============================================ -->
-    <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('assets/sistema/js/owl.carousel.min.js') }}"></script>
     <!-- sticky JS
 		============================================ -->
-    <script src="{{ asset('js/jquery.sticky.js') }}"></script>
+    <script src="{{ asset('assets/sistema/js/jquery.sticky.js') }}"></script>
     <!-- scrollUp JS
 		============================================ -->
-    <script src="{{ asset('js/jquery.scrollUp.min.js') }}"></script>
+    <script src="{{ asset('assets/sistema/js/jquery.scrollUp.min.js') }}"></script>
     <!-- counterup JS
 		============================================ -->
-    <script src="{{ asset('js/counterup/jquery.counterup.min.js') }}"></script>
-    <script src="{{ asset('js/counterup/waypoints.min.js') }}"></script>
-    <script src="{{ asset('js/counterup/counterup-active.js') }}"></script>
+    <script src="{{ asset('assets/sistema/js/counterup/jquery.counterup.min.js') }}"></script>
+    <script src="{{ asset('assets/sistema/js/counterup/waypoints.min.js') }}"></script>
+    <script src="{{ asset('assets/sistema/js/counterup/counterup-active.js') }}"></script>
     <!-- mCustomScrollbar JS
 		============================================ -->
-    <script src="{{ asset('js/scrollbar/jquery.mCustomScrollbar.concat.min.js') }}"></script>
-    <script src="{{ asset('js/scrollbar/mCustomScrollbar-active.js') }}"></script>
+    <script src="{{ asset('assets/sistema/js/scrollbar/jquery.mCustomScrollbar.concat.min.js') }}"></script>
+    <script src="{{ asset('assets/sistema/js/scrollbar/mCustomScrollbar-active.js') }}"></script>
     <!-- metisMenu JS
 		============================================ -->
-    <script src="{{ asset('js/metisMenu/metisMenu.min.js') }}"></script>
-    <script src="{{ asset('js/metisMenu/metisMenu-active.js') }}"></script>
+    <script src="{{ asset('assets/sistema/js/metisMenu/metisMenu.min.js') }}"></script>
+    <script src="{{ asset('assets/sistema/js/metisMenu/metisMenu-active.js') }}"></script>
     <!-- morrisjs JS
 		============================================ -->
-    <script src="{{ asset('js/morrisjs/raphael-min.js') }}"></script>
-    <script src="{{ asset('js/morrisjs/morris.js') }}"></script>
-    <script src="{{ asset('js/morrisjs/morris-active.js') }}"></script>
+    <script src="{{ asset('assets/sistema/js/morrisjs/raphael-min.js') }}"></script>
+    <script src="{{ asset('assets/sistema/js/morrisjs/morris.js') }}"></script>
+    <script src="{{ asset('assets/sistema/js/morrisjs/morris-active.js') }}"></script>
     <!-- morrisjs JS
 		============================================ -->
-    <script src="{{ asset('js/sparkline/jquery.sparkline.min.js') }}"></script>
-    <script src="{{ asset('js/sparkline/jquery.charts-sparkline.js') }}"></script>
-    <script src="{{ asset('js/sparkline/sparkline-active.js') }}"></script>
+    <script src="{{ asset('assets/sistema/js/sparkline/jquery.sparkline.min.js') }}"></script>
+    <script src="{{ asset('assets/sistema/js/sparkline/jquery.charts-sparkline.js') }}"></script>
+    <script src="{{ asset('assets/sistema/js/sparkline/sparkline-active.js') }}"></script>
     <!-- calendar JS
 		============================================ -->
-    <script src="{{ asset('js/calendar/moment.min.js') }}"></script>
-    <script src="{{ asset('js/calendar/fullcalendar.min.js') }}"></script>
-    <script src="{{ asset('js/calendar/fullcalendar-active.js') }}"></script>
+    <script src="{{ asset('assets/sistema/js/calendar/moment.min.js') }}"></script>
+    <script src="{{ asset('assets/sistema/js/calendar/fullcalendar.min.js') }}"></script>
+    <script src="{{ asset('assets/sistema/js/calendar/fullcalendar-active.js') }}"></script>
     <!-- plugins JS
 		============================================ -->
-    <script src="{{ asset('js/plugins.js') }}"></script>
+    <script src="{{ asset('assets/sistema/js/plugins.js') }}"></script>
     <!-- main JS
 		============================================ -->
-    <script src="{{ asset('js/main.js') }}"></script>
+    <script src="{{ asset('assets/sistema/js/main.js') }}"></script>
     <!-- tawk chat JS
 		============================================ -->
-    <script src="{{ asset('js/tawk-chat.js') }}"></script>
+    <script src="{{ asset('assets/sistema/js/tawk-chat.js') }}"></script>
 </body>
