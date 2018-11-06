@@ -3,10 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
+    <title>Casa Blanca | Teatro</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="assets/pagina/css/main.css" />
-    <script src="main.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="<?php echo e(asset('assets/sistema/img/favicon.png')); ?>">
 </head>
 <body>
 <?php $__env->startSection('header'); ?>

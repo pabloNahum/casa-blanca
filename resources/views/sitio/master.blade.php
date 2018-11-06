@@ -5,6 +5,8 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/pagina/css/main.css" />
+		<meta name="description" content="La manera de vivir el Teatro de una manera diferente siendo tú parte de la historia."
+		<link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/sistema/img/favicon.png') }}">
 	</head>
 	<body>
 	@yield('content')

@@ -231,7 +231,7 @@ background: rgba(0,0,0,0.4);
 }
 
 .focus-input2::before {
-  content: "";
+  content: ;
   display: block;
   position: absolute;
   bottom: -2px;

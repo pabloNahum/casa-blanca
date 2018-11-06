@@ -197,49 +197,42 @@
                                         <li><a href="#">Reporte</a></li>
                                         <li><a data-toggle="collapse" data-target="#demoevent" href="#">Actores <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
                                             <ul id="demoevent" class="collapse dropdown-header-top">
-                                                <li><a href="#">Consultar Actores</a>
-                                                </li>
-                                                <li><a href="#">Nuevo Actor</a>
-                                                </li>
-                                                <li><a href="#">Editar Actor</a>
-                                                </li>
-                                                <li><a href="#">Eliminar Actor</a>
-                                                </li>
+                                                <li><a title="Ver Actores" href="{{ url('sistema/actores/consulta_actor') }}"><span class="mini-sub-pro">Consutar Actores</span></a></li>
+												<li><a title="Agregar Actor" href="{{ url('/sistema/actores/nuevo_actor') }}"><span class="mini-sub-pro">Nuevo Actor</span></a></li>
+												<li><a title="Modificar Actor" href="{{ url('/sistema/actores/modifica_actor') }}"><span class="mini-sub-pro">Editar Actor</span></a></li>
+												<li><a title="Borrar Actor" href="{{ url('/sistema/actores/elimina_actor') }}"><span class="mini-sub-pro">Eliminar Actor</span></a></li>
                                             </ul>
                                         </li>
                                         <li><a data-toggle="collapse" data-target="#demopro" href="#">Obras <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
                                             <ul id="demopro" class="collapse dropdown-header-top">
-                                                <li><a href="#">Consultar Obra</a>
-                                                </li>
-                                                <li><a href="#">Nueva Obra</a>
-                                                </li>
-                                                <li><a href="#">Editar Obra</a>
-                                                </li>
-                                                <li><a href="#">Eliminar Obra</a>
-                                                </li>
+                                                <li><a title="Ver Obras" href="{{ url('/sistema/obras/consulta_obra') }}"><span class="mini-sub-pro">Consultar Obras</span></a></li>
+												<li><a title="Agregar Obra" href="{{ url('/sistema/obras/nueva_obra') }}"><span class="mini-sub-pro">Nueva Obra</span></a></li>
+												<li><a title="Modificar Obra" href="{{ url('/sistema/obras/modifica_obra') }}"><span class="mini-sub-pro">Editar Obra</span></a></li>
+												<li><a title="Borrar Obra" href="{{ url('/sistema/obras/elimina_obra') }}"><span class="mini-sub-pro">Eliminar Obra</span></a></li>
+                                            </ul>
+                                        </li>
+										<li><a data-toggle="collapse" data-target="#democrou" href="#">Horarios <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
+                                            <ul id="democrou" class="collapse dropdown-header-top">
+                                                <li><a title="Ver Horarios" href="{{ url('/sistema/horarios/consulta_horario') }}"><span class="mini-sub-pro">Consultar Horarios</span></a></li>
+												<li><a title="Agregar Horario" href="{{ url('/sistema/horarios/nuevo_horario') }}"><span class="mini-sub-pro">Nuevo Horario</span></a></li>
+												<li><a title="Modificar Horario" href="{{ url('/sistema/horarios/modifica_horario') }}"><span class="mini-sub-pro">Editar Horario</span></a></li>
+												<li><a title="Borrar Horario" href="{{ url('/sistema/horarios/elimina_horario') }}"><span class="mini-sub-pro">Eliminar Horario</span></a></li>
                                             </ul>
                                         </li>
                                         <li><a data-toggle="collapse" data-target="#democrou" href="#">Clientes <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
                                             <ul id="democrou" class="collapse dropdown-header-top">
-                                                <li><a href="#">Consultar Clientes</a>
-                                                </li>
-                                                <li><a href="#">Nuevo Cliente</a>
-                                                </li>
-                                                <li><a href="#">Editar Cliente</a>
-                                                </li>
-                                                <li><a href="#">Eliminar Clientes</a>
-                                                </li>
+												<li><a title="Ver Clientes" href="{{ url('/sistema/clientes/consulta_cliente') }}"><span class="mini-sub-pro">Consultar Clientes</span></a></li>
+												<li><a title="Agregar Cliente" href="{{ url('/sistema/clientes/nuevo_cliente') }}"><span class="mini-sub-pro">Nuevo Cliente</span></a></li>
+												<li><a title="Modificar Cliente" href="{{ url('/sistema/clientes/modifica_cliente') }}"><span class="mini-sub-pro">Editar Cliente</span></a></li>
+												<li><a title="Borrar Cliente" href="{{ url('/sistema/clientes/elimina_cliente') }}"><span class="mini-sub-pro">Eliminar Cliente</span></a></li>
                                             </ul>
                                         </li>
                                         <li><a data-toggle="collapse" data-target="#demolibra" href="#">Usuarios <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
                                             <ul id="demolibra" class="collapse dropdown-header-top">
-                                                </li>
-                                                <li><a href="#">Nuevo Usuario</a>
-                                                </li>
-                                                <li><a href="#">Editar Usuario</a>
-                                                </li>
-                                                <li><a href="#">Eliminar Usuario</a>
-                                                </li>
+                                                <li><a title="Ver Usuarios" href="{{ url('/sistema/usuarios/consulta_usuario') }}"><span class="mini-sub-pro">Consultar Usuarios</span></a></li>
+												<li><a title="Agregar Usuario" href="{{ url('/sistema/usuarios/nuevo_usuario') }}"><span class="mini-sub-pro">Nuevo Usuario</span></a></li>
+												<li><a title="Modificar Usuario" href="{{ url('/sistema/usuarios/modifica_usuario') }}"><span class="mini-sub-pro">Editar Usuario</span></a></li>
+												<li><a title="Borrar Usuario" href="{{ url('/sistema/usuarios/elimina_usuario') }}"><span class="mini-sub-pro">Eliminar Usuario</span></a></li>
                                             </ul>
                                         </li>
                                     </ul>
