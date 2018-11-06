@@ -4,9 +4,9 @@
 		<title>Casa Blanca | Teatro</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="assets/pagina/css/main.css" />
-		<meta name="description" content="La manera de vivir el Teatro de una manera diferente siendo tú parte de la historia."
-		<link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/sistema/img/favicon.png') }}">
+		<link rel="stylesheet" href="{{ asset('assets/pagina/css/main.css') }}" />
+		<meta name="description" content="La manera de vivir el Teatro de una manera diferente siendo tú parte de la historia."/>
+		<link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/sistema/img/favicon.png') }}"/>
 	</head>
 	<body>
 	@yield('content')
@@ -41,11 +41,11 @@
 			</footer>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="{{ asset('assets/pagina/js/jquery.min.js') }}"></script>
+			<script src="{{ asset('assets/pagina/js/jquery.scrollex.min.js') }}"></script>
+			<script src="{{ asset('assets/pagina/js/skel.min.js') }}"></script>
+			<script src="{{ asset('assets/pagina/js/util.js') }}"></script>
+			<script src="{{ asset('assets/pagina/js/main.js') }}"></script>
 
 	</body>
 </html>
